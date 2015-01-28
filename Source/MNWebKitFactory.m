@@ -28,7 +28,7 @@
 #import "MNWebKitUserContentController.h"
 #import "MNWebKitUserScript.h"
 #import "MNWebKitScriptMessage.h"
-//#import <WebKit/WebKit.h> // UNCOMMENT WHEN WEBKIT WORKS
+#import <WebKit/WebKit.h>
 
 typedef NS_ENUM(NSInteger, MNWebKitFactoryClassSet) {
     MNWebKitFactoryClassSetClassic,
@@ -55,20 +55,12 @@ typedef NS_ENUM(NSInteger, MNWebKitFactoryClassSet) {
             _scriptMessageClass = [MNWebKitScriptMessage class];
         }
         else {
-            // UNCOMMENT WHEN WEBKIT WORKS
-            /*_webViewClass = [WKWebView class];
+            _webViewClass = [WKWebView class];
             _webViewConfigurationClass = [WKWebViewConfiguration class];
             _navigationClass = [WKNavigation class];
             _userContentControllerClass = [WKUserContentController class];
             _userScriptClass = [WKUserScript class];
-            _scriptMessageClass = [WKScriptMessage class];*/
-            
-            _webViewClass = [MNWebKitWebView class];
-            _webViewConfigurationClass = [MNWebKitWebViewConfiguration class];
-            _navigationClass = [MNWebKitNavigation class];
-            _userContentControllerClass = [MNWebKitUserContentController class];
-            _userScriptClass = [MNWebKitUserScript class];
-            _scriptMessageClass = [MNWebKitScriptMessage class];
+            _scriptMessageClass = [WKScriptMessage class];
         }
     }
     
