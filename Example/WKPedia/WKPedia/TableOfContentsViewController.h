@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  TableOfContentsViewController.h
 //
 //  Copyright (c) 2015 David Robles
 //
@@ -23,10 +23,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface TableOfContentsViewController : UITableViewController
 
-@property (strong, nonatomic) UIWindow *window;
-
+- (void)didFinishLoadingTableOfContents:(id)messageBody;
 
 @end
-

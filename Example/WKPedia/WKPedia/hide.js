@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  hide.js
 //
 //  Copyright (c) 2015 David Robles
 //
@@ -21,12 +21,6 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-#import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
-
-@end
-
+var styleElement = document.createElement('style');
+document.documentElement.appendChild(styleElement);
+styleElement.textContent = '.toc { display : none !important; } #mw-panel { display: none !important; } #content { margin: 0px 10px 0px 10px !important; };';

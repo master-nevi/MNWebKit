@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  NSString+WKPediaExtras.h
 //
 //  Copyright (c) 2015 David Robles
 //
@@ -21,12 +21,10 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface NSString (WKPediaExtras)
 
-@property (strong, nonatomic) UIWindow *window;
-
+- (NSString *)wkpedia_stringByDeletingWikipediaSnippet;
 
 @end
-

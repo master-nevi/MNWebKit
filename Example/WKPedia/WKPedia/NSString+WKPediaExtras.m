@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  NSString+WKPediaExtras.m
 //
 //  Copyright (c) 2015 David Robles
 //
@@ -21,12 +21,17 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import "NSString+WKPediaExtras.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@implementation NSString (WKPediaExtras)
 
-@property (strong, nonatomic) UIWindow *window;
-
+- (NSString *)wkpedia_stringByDeletingWikipediaSnippet {
+    NSRange wikipediaRange = [self rangeOfString:@" - Wikipedia, the free encyclopedia" options:NSBackwardsSearch];
+    if (wikipediaRange.location == NSNotFound) {
+        return self;
+    }
+    
+    return [self substringToIndex:wikipediaRange.location];
+}
 
 @end
-

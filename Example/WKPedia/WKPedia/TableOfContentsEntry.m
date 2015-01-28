@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  TableOfContentsEntry.m
 //
 //  Copyright (c) 2015 David Robles
 //
@@ -21,12 +21,17 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import "TableOfContentsEntry.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@implementation TableOfContentsEntry
 
-@property (strong, nonatomic) UIWindow *window;
-
+- (instancetype)initWithTitle:(NSString *)title URL:(NSURL *)URL {
+    if (self = [super init]) {
+        _title = title;
+        _URL = URL;
+    }
+    
+    return self;
+}
 
 @end
-

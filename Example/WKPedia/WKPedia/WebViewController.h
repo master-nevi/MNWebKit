@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  WebViewController.h
 //
 //  Copyright (c) 2015 David Robles
 //
@@ -23,10 +23,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface WebViewController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
-
+- (void)loadRequest:(NSURLRequest *)request;
 
 @end
 

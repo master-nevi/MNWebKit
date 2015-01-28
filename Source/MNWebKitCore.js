@@ -1,3 +1,4 @@
+//
 //  MNWebKitCore.js
 //
 //  Copyright (c) 2015 David Robles

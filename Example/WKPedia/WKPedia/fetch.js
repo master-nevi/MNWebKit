@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  fetch.js
 //
 //  Copyright (c) 2015 David Robles
 //
@@ -21,12 +21,20 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-#import <UIKit/UIKit.h>
+var entries = [];
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+var tocLinks = document.querySelectorAll('.toc li.toclevel-1 a');
 
-@property (strong, nonatomic) UIWindow *window;
+for (var i = 0; i < tocLinks.length; ++i) {
+	var tocLink = tocLinks[i];
 
+	var tocText = tocLink.querySelector('.toctext');
 
-@end
+	if (!tocText)
+		break;
 
+	var entry = { 'title' : tocText.textContent , 'urlString' : tocLink.href };
+	entries.push(entry);
+}
+
+webkit.messageHandlers.didFetchTableOfContents.postMessage(entries);

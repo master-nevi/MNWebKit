@@ -1,0 +1,17 @@
+PODS:
+  - GDataXML-HTML (1.2.0)
+  - MNWebKit (0.0.6):
+    - GDataXML-HTML (~> 1.2.0)
+
+DEPENDENCIES:
+  - MNWebKit (from `../..`)
+
+EXTERNAL SOURCES:
+  MNWebKit:
+    :path: ../..
+
+SPEC CHECKSUMS:
+  GDataXML-HTML: 3aa8f4200dd461d0a95d812397cebd6a2c98953f
+  MNWebKit: 0da4ee6eca88ea1f0a24ef31fca446a0c2da1071
+
+COCOAPODS: 0.35.0
